@@ -19,8 +19,8 @@ jobs:
           name: Run lint
           command: npm run lint
   deploy:
+    executor: node/default
     steps:
-      executor: node/default
       - run:
           name: deploy
           command: curl "https://api.render.com/deploy/srv-cq0p3teehbks73effej0?key=RJVO1arTqxw"
