@@ -12,9 +12,9 @@ export default function NamesInput({ label }) {
         const lastName = target[1].value;
         console.log('target[0]', firstName);
         console.log('target[1]', lastName);
-        const localUrl = 'http://localhost:3001/names';
+        const url = 'https://cicd-demo-server.onrender.com/names';
         
-        const response = await fetch(localUrl, {
+        const response = await fetch(url, {
             method: 'POST',
             body: JSON.stringify({firstName: firstName, lastName: lastName}),
             headers: {
